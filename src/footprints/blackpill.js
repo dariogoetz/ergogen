@@ -35,8 +35,8 @@ module.exports = {
     C15: 'C15',
     GND: 'GND',
     R: 'R',
-    V33: 'V33',
-    V5: 'V5',
+    VCC: 'VCC',
+    RAW: 'RAW',
     VB: 'VB',
   },
   params: {
@@ -69,9 +69,9 @@ module.exports = {
         (fp_line (start 3.07 ${def_pos}6.35) (end 3.07 ${def_pos}8.89) (layer ${side}.SilkS) (width 0.15))
       
         ${''/* pin names */}
-        (fp_text user V5 (at 1.80 ${def_pos}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user RAW (at 1.80 ${def_pos}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
         (fp_text user GND (at 4.34 ${def_pos}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user V33 (at 6.88 ${def_pos}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user VCC (at 6.88 ${def_pos}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
         (fp_text user B10 (at 9.42 ${def_pos}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
         (fp_text user B2 (at 11.96 ${def_pos}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
         (fp_text user B1 (at 14.50 ${def_pos}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
@@ -106,14 +106,14 @@ module.exports = {
         (fp_text user B7 (at 37.36 ${def_neg}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
         (fp_text user B8 (at 39.90 ${def_neg}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
         (fp_text user B9 (at 42.44 ${def_neg}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user V5 (at 44.98 ${def_neg}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user RAW (at 44.98 ${def_neg}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
         (fp_text user GND (at 47.52 ${def_neg}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user V33 (at 50.06 ${def_neg}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user VCC (at 50.06 ${def_neg}4.8 ${p.rot + 90}) (layer ${side}.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
 
         ${''/* and now the actual pins */}
-        (pad 1 thru_hole circle (at 1.80 ${def_pos}7.62 ${p.rot}) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.V5.str})
+        (pad 1 thru_hole circle (at 1.80 ${def_pos}7.62 ${p.rot}) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.RAW.str})
         (pad 2 thru_hole circle (at 4.34 ${def_pos}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.GND.str})
-        (pad 3 thru_hole circle (at 6.88 ${def_pos}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.V33.str})
+        (pad 3 thru_hole circle (at 6.88 ${def_pos}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.VCC.str})
         (pad 4 thru_hole circle (at 9.42 ${def_pos}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.B10.str})
         (pad 5 thru_hole circle (at 11.96 ${def_pos}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.B2.str})
         (pad 6 thru_hole circle (at 14.50 ${def_pos}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.B1.str})
@@ -148,9 +148,9 @@ module.exports = {
         (pad 35 thru_hole circle (at 37.36 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.B7.str})
         (pad 36 thru_hole circle (at 39.90 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.B8.str})
         (pad 37 thru_hole circle (at 42.44 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.B9.str})
-        (pad 38 thru_hole circle (at 44.98 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.V5.str})
+        (pad 38 thru_hole circle (at 44.98 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.RAW.str})
         (pad 39 thru_hole circle (at 47.52 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.GND.str})
-        (pad 40 thru_hole circle (at 50.06 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.V33.str})
+        (pad 40 thru_hole circle (at 50.06 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.VCC.str})
       `
     }
     if ((p.param.orientation == 'down' && p.param.side == 'F') || (p.param.orientation == 'up' && p.param.side == 'B')) {
