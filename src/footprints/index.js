@@ -4,6 +4,7 @@ module.exports = {
   blackpill: require('./blackpill'),
   choc: require('./choc'),
   chocmini: require('./chocmini'),
+  longan_nano: require('./longan_nano'),
   diode: require('./diode'),
   jstph: require('./jstph'),
   jumper: require('./jumper'),
