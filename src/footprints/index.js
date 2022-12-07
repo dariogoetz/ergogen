@@ -3,6 +3,7 @@ module.exports = {
   button: require('./button'),
   blackpill: require('./blackpill'),
   choc: require('./choc'),
+  choc_optional: require('./choc_optional'),
   chocmini: require('./chocmini'),
   longan_nano: require('./longan_nano'),
   diode: require('./diode'),
