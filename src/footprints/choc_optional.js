@@ -73,8 +73,8 @@ module.exports = {
       if (p.param.solder) {
         res += `
             ${''/* pins */}
-            (pad 1 thru_hole circle (at ${def_pos}5 3.8) (size 2.032 2.032) (drill 1.27) (layers *.Cu *.Mask) ${p.net.from.str})
-            (pad 2 thru_hole circle (at ${def_pos}0 5.9) (size 2.032 2.032) (drill 1.27) (layers *.Cu *.Mask) ${p.net.to.str})
+            (pad 1 thru_hole circle (at ${def_neg}5 3.8) (size 2.032 2.032) (drill 1.27) (layers *.Cu *.Mask) ${p.net.from.str})
+            (pad 2 thru_hole circle (at ${def_neg}0 5.9) (size 2.032 2.032) (drill 1.27) (layers *.Cu *.Mask) ${p.net.to.str})
           `
       }
       return res
@@ -90,7 +90,7 @@ module.exports = {
       return `
         ${standard}
         ${p.param.keycaps ? keycap : ''}
-        ${pins('-', '', 'B')})
+        ${pins('-', '', 'F')})
         `
     }
   }
