@@ -21,8 +21,9 @@ module.exports = {
     class: 'S',
     hotswap: false,
     solder: true,
-    reverse: false,
-    keycaps: false
+    both_sides: false,
+    keycaps: false,
+    front: true
   },
   body: p => {
     const standard = `
@@ -79,18 +80,24 @@ module.exports = {
       }
       return res
     }
-    if (p.param.reverse) {
+    if (p.param.both_sides) {
       return `
         ${standard}
         ${p.param.keycaps ? keycap : ''}
         ${pins('-', '', 'B')}
         ${pins('', '-', 'F')})
         `
+    } else if (p.param.front) {
+      return `
+        ${standard}
+        ${p.param.keycaps ? keycap : ''}
+        ${pins('', '-', 'F')})
+        `
     } else {
       return `
         ${standard}
         ${p.param.keycaps ? keycap : ''}
-        ${pins('-', '', 'F')})
+        ${pins('-', '', 'B')})
         `
     }
   }
